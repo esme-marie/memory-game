@@ -4,7 +4,6 @@ import { GameResultType } from "@/types/types";
 import styles from "@/styles/GameResults.module.scss";
 import stylesComp from "@/styles/Components.module.scss";
 
-
 type Props = GameResultType & {
   gameTimedOut: boolean;
   numberOfPlayers: number;
@@ -63,9 +62,7 @@ const GameResults: NextComponentType<NextPageContext, {}, Props> = (
             {gameTimedOut && (
               <Fragment>
                 <h1 className={styles.card_heading}>Time is up!</h1>
-                <p className={styles.card_description}>
-                  Try again?
-                </p>
+                <p className={styles.card_description}>Try again?</p>
               </Fragment>
             )}
 
@@ -109,13 +106,13 @@ const GameResults: NextComponentType<NextPageContext, {}, Props> = (
                   className={`${styles.result_bar} info-bar 
                         ${player.score === highScore ? styles.winner : ""}`}
                 >
-                  <h3 className="bar-label">
+                  <h3 className={styles.bar_label}>
                     {player.label}
                     {player.score === highScore && " (Winner!)"}
                   </h3>
 
-                  <h2 className="bar-value">
-                    {player.score} {player.score === 1 ? "Pair" : "Pairs"}
+                  <h2 className={styles.bar_value}>
+                    {player.score} {player.score <= 1 ? "Pair" : "Pairs"}
                   </h2>
                 </div>
               ))}

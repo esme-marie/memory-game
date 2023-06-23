@@ -62,11 +62,16 @@
       &.winner {
         background-color: $dark-blue;
         color: $primary-white;
+      }
 
-        .bar-label,
-        .bar-value {
-          color: inherit;
-        }
+      .bar_label {
+        color: inherit;
+        font-size: 1.8rem;
+      }
+
+      .bar_value {
+        color: inherit;
+        font-size: 3.2rem;
       }
     }
   }

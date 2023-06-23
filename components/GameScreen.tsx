@@ -228,7 +228,7 @@ const GameScreen: NextComponentType<NextPageContext, {}, Props> = (
         />
 
         {numberOfPlayers === 1 && (
-          <div className={stylesComp.game_stats}>
+          <div className="game-stats">
             <Timer
               key={timerKey}
               gameStarted={gameStarted}
@@ -238,7 +238,7 @@ const GameScreen: NextComponentType<NextPageContext, {}, Props> = (
               onCompletedTime={submitTimeNeeded}
             />
 
-            <div className={`info-bar ${stylesComp.stat_bar}`}>
+            <div className="info-bar stat-bar">
               <h3 className="bar-label">Moves</h3>
               <h2 className="bar-value">{movesNeeded}</h2>
             </div>

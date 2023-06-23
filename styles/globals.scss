@@ -12,26 +12,33 @@ body {
   height: 100%;
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 
+body::-webkit-scrollbar {
+  display: none;
+} /* Safari and Chrome */
+
+
+
 html {
+  scrollbar-width: none; /* Firefox */
   font-size: 50%;
-  scroll-behavior: smooth;
 
   @include breakpoint(1600) {
     font-size: 60%;
   }
 
   @include breakpoint(1000) {
-    font-size: 45%;
+    font-size: 55%;
   }
 
   @include breakpoint(600) {
-    font-size: 35%;
+    font-size: 45%;
   }
 
   @include breakpoint(320) {
-    font-size: 25%;
+    font-size: 40%;
   }
 }
 
@@ -41,6 +48,32 @@ button {
   cursor: pointer;
   font-size: 2.3rem;
   font-weight: bold;
+}
+
+.game-stats {
+  display: flex;
+  column-gap: 3rem;
+  margin-top: 8rem;
+
+  &:not(.total_players_3),
+  &:not(.total_players_4) {
+    @include breakpoint(500) {
+      margin-top: 10rem;
+      width: calc(100vw - 8rem);
+    }
+
+    @include breakpoint(400) {
+      column-gap: 2rem;
+      width: calc(100vw - 5.6rem);
+    }
+
+    .stat-bar {
+      @include breakpoint(500) {
+        flex-basis: 50%;
+        width: auto;
+      }
+    }
+  }
 }
 
 .game-stats {

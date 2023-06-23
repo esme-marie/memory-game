@@ -40,32 +40,6 @@
   }
 }
 
-.game_stats {
-  display: flex;
-  column-gap: 3rem;
-  margin-top: 8rem;
-
-  &:not(.total_players_3),
-  &:not(.total_players_4) {
-    @include breakpoint(500) {
-      margin-top: 10rem;
-      width: calc(100vw - 8rem);
-    }
-
-    @include breakpoint(400) {
-      column-gap: 2rem;
-      width: calc(100vw - 5.6rem);
-    }
-
-    .stat_bar {
-      @include breakpoint(500) {
-        flex-basis: 50%;
-        width: auto;
-      }
-    }
-  }
-}
-
 #s_player_label {
   @include breakpoint(500) {
     display: block;

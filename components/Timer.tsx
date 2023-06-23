@@ -71,7 +71,7 @@ const Timer: NextComponentType<NextPageContext, {}, Props> = (props: Props) => {
   }, [timer.minutes, onGameTimedOut]);
 
   return (
-    <div className={`info-bar ${stylesComp.stat_bar}`}>
+    <div className="info-bar stat-bar">
       <h3 className="bar-label">Time</h3>
       <h2 className="bar-value">
         {timer.minutes}:{timer.seconds}

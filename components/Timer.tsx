@@ -63,9 +63,9 @@ const Timer: NextComponentType<NextPageContext, {}, Props> = (props: Props) => {
     }
   }, [gameCompleted, timerId, timer, onCompletedTime]);
 
-  // Set 10 minutes game timed out
+  // Set 5 minutes game timed out
   useEffect(() => {
-    if (Number(timer.minutes) === 1) {
+    if (Number(timer.minutes) === 5) {
       onGameTimedOut();
     }
   }, [timer.minutes, onGameTimedOut]);

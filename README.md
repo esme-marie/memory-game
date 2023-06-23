@@ -9,6 +9,9 @@ NextJs with Typescript.
 - Solo or multiplayer (up to 4 players).
 - Choose to play on 4x4 or 6x6 grid.
 
+### Deployed on
+[Vercel](https://memory-game-esme-marie.vercel.app/)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

@@ -1,0 +1,30 @@
+@import "@/styles/variables/variables.scss";
+@import "@/styles/mixins/mixins.scss";
+
+.menu_card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  background-color: $primary-white;
+  border-radius: 2rem;
+  padding: 5.4rem;
+  text-align: center;
+
+  @include breakpoint(500) {
+    width: 80vw;
+  }
+
+  @include breakpoint(400) {
+    padding: 4.2rem;
+    width: 90vw;
+  }
+
+  button {
+    padding: 1.6rem;
+    width: 44rem;
+
+    @include breakpoint(500) {
+      width: auto;
+    }
+  }
+}

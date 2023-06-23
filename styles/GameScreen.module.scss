@@ -1,0 +1,58 @@
+@import "@/styles/variables/variables.scss";
+@import "@/styles/mixins/mixins.scss";
+
+.game_screen {
+  background-color: $primary-white;
+  padding: 6.4rem 6.4rem 8rem;
+  position: relative;
+  min-height: 100vh;
+
+  @include breakpoint(500) {
+    padding: 4rem 4rem 8rem;
+  }
+
+  @include breakpoint(400) {
+    padding: 4rem 2.8rem 8rem;
+  }
+}
+
+.header_section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  .control_buttons {
+    width: 40rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.reset_button {
+  width: 8em;
+  padding: 1.2rem !important;
+}
+
+.new_game_button {
+  width: 8em;
+  padding: 1.2rem !important;
+}
+
+.game_title {
+  color: $dark-blue;
+  font-size: 4rem;
+  text-align: center;
+  margin: 3rem;
+}
+
+.game_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10rem;
+
+  @include breakpoint(500) {
+    margin-top: 12rem;
+  }
+}

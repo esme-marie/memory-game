@@ -1,0 +1,94 @@
+@import "@/styles/mixins/mixins.scss";
+@import "@/styles/variables/variables.scss";
+
+.start_screen {
+  background-color: $dark-blue;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 4rem 8rem;
+  position: relative;
+
+  @include breakpoint(500) {
+    padding: 3rem 3rem 8rem;
+  }
+}
+
+.game_menu {
+  background-color: $primary-white;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 3.2rem;
+  padding: 5.6rem;
+  width: 65rem;
+
+  @include breakpoint(500) {
+    width: calc(100vw - 6rem);
+  }
+}
+
+.start_title {
+  color: $primary-white;
+  font-size: 4rem;
+  text-align: center;
+  margin: 3rem;
+}
+
+.group_title {
+  color: $secondary-blue;
+  font-size: 2.2rem;
+  flex-basis: 100%;
+  margin-bottom: 1.6rem;
+}
+
+.option_group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &.options_two {
+    .option_selector {
+      flex-basis: calc(50% - 1.5rem);
+
+      @include breakpoint(400) {
+        flex-basis: calc(50% - 1rem);
+      }
+    }
+  }
+
+  &.options_four {
+    .option_selector {
+      flex-basis: calc(25% - 1.5rem);
+
+      @include breakpoint(400) {
+        flex-basis: calc(25% - 1rem);
+      }
+    }
+  }
+
+  .option_selector {
+    button {
+      background-color: $primary-gray;
+      color: $primary-white;
+      padding: 1rem;
+      width: 100%;
+      transition: background-color 0.2s, color 0.2s;
+
+      &:hover {
+        background-color: $menu-hover;
+      }
+    }
+
+    input {
+      display: none;
+    }
+
+    input:checked + .option_button {
+      background-color: $primary-blue;
+    }
+  }
+}

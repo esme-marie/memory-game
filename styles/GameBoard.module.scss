@@ -1,0 +1,127 @@
+@import "@/styles/variables/variables.scss";
+@import "@/styles/mixins/mixins.scss";
+
+.game_grid {
+  display: grid;
+
+  .grid_tile {
+    border: none;
+    outline: none;
+    border-radius: 100%;
+    line-height: 0;
+    cursor: pointer;
+    color: #fcfcfc;
+    font-weight: 700;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+
+    svg {
+      fill: #fcfcfc;
+    }
+
+    svg,
+    span {
+      animation: brighten-up 0.3s;
+    }
+
+    &.blue_tile {
+      background-color: $primary-blue;
+
+      &:hover {
+        background-color: $secondary-hover;
+      }
+
+      &:focus-visible {
+        outline: $primary-orange solid 1.2rem;
+        outline-offset: 4px;
+      }
+    }
+
+    &.orange_tile {
+      background-color: $primary-orange;
+    }
+
+    &.gray_tile {
+      background-color: $primary-gray;
+    }
+  }
+}
+
+.four_tiles_column {
+  grid-template-columns: repeat(4, 11.8rem);
+  gap: 2rem;
+
+  @include breakpoint(500) {
+    grid-template-columns: repeat(4, calc(25vw - 3.6rem));
+  }
+
+  @include breakpoint(400) {
+    gap: 1.2rem;
+    grid-template-columns: repeat(4, calc(25vw - 2.3rem));
+  }
+
+  .grid_tile {
+    height: 11.8rem;
+    font-size: 5.6rem;
+
+    @include breakpoint(500) {
+      height: calc(25vw - 3.6rem);
+    }
+
+    @include breakpoint(400) {
+      height: calc(25vw - 2.3rem);
+    }
+
+    svg {
+      height: 70%;
+      width: 70%;
+    }
+  }
+}
+
+.six_tiles_column {
+  grid-template-columns: repeat(6, 8rem);
+  gap: 1rem;
+
+  @include breakpoint(500) {
+    grid-template-columns: repeat(6, calc(16.5vw - 2rem));
+  }
+
+  @include breakpoint(400) {
+    gap: 0.8rem;
+    grid-template-columns: repeat(6, calc(16.5vw - 1.5rem));
+  }
+
+  .grid_tile {
+    height: 8rem;
+    font-size: 4.4rem;
+
+    @include breakpoint(500) {
+      height: calc(16.5vw - 2rem);
+    }
+
+    @include breakpoint(400) {
+      height: calc(16.5vw - 1.5rem);
+      font-size: 4rem;
+    }
+
+    svg {
+      height: 80%;
+      width: 80%;
+
+      @include breakpoint(400) {
+        height: 90%;
+        width: 90%;
+      }
+    }
+  }
+}
+
+@keyframes brighten-up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}

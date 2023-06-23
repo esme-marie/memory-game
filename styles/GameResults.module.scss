@@ -1,0 +1,82 @@
+@import "@/styles/variables/variables.scss";
+@import "@/styles/mixins/mixins.scss";
+
+.game_result_card {
+  background-color: $primary-white;
+  border-radius: 2rem;
+  padding: 5rem 5.6rem 6rem;
+  text-align: center;
+  animation: brighten-up 0.3s ease-in-out;
+
+  @include breakpoint(500) {
+    width: 90vw;
+    padding: 5rem 4rem 6rem;
+  }
+
+  @include breakpoint(400) {
+    padding: 5rem 3rem;
+  }
+
+  .card_heading {
+    color: $dark-blue;
+    font-size: 4.8rem;
+  }
+
+  .card_description {
+    color: $secondary-blue;
+    font-size: 1.8rem;
+    margin-top: 1.6rem;
+  }
+
+  .control_buttons {
+    display: flex;
+    column-gap: 1.4rem;
+    justify-content: space-between;
+    margin-top: 4rem;
+
+    button {
+      flex-basis: 50%;
+      padding: 1.6rem;
+    }
+  }
+
+  .result_bars {
+    margin-top: 4rem;
+
+    .result_bar {
+      padding: 1.5rem 3rem;
+      width: 54rem;
+
+      @include breakpoint(1000) {
+        width: 48rem;
+      }
+
+      @include breakpoint(500) {
+        width: auto;
+      }
+
+      &:not(:first-of-type) {
+        margin-top: 1.6rem;
+      }
+
+      &.winner {
+        background-color: $dark-blue;
+        color: $primary-white;
+
+        .bar-label,
+        .bar-value {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+@keyframes brighten-up {
+  from {
+    opacity: 10%;
+  }
+  to {
+    opacity: 100%;
+  }
+}

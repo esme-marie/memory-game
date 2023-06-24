@@ -44,8 +44,16 @@ button {
   border-radius: 10rem;
   border: none;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
+
+  @include breakpoint(500) {
+    font-size: 1.8rem;
+  }
+
+  @include breakpoint(400) {
+    font-size: 1.75rem;
+  }
 }
 
 .game-stats {

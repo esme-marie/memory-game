@@ -5,7 +5,6 @@ import { shuffle } from "@/helper-functions/helper-functions";
 import { TileType } from "@/types/types";
 import styles from "@/styles/GameBoard.module.scss";
 
-
 interface Props {
   gameTheme: string;
   numberOfPlayers: number;
@@ -133,7 +132,7 @@ const GameBoard: NextComponentType<NextPageContext, {}, Props> = (
     }
   };
 
-  // Check for tiles that matched for background colour setting
+  // Show icon or number on tile when clicked
   const tileIsFlipped = (tile: string, index: number) => {
     if (
       tilesMatched.has(tile) ||

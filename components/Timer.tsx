@@ -2,7 +2,6 @@ import type { NextComponentType, NextPageContext } from "next";
 import { useEffect, useState } from "react";
 import { TimerType } from "@/types/types";
 import { updateTimer } from "@/helper-functions/helper-functions";
-import stylesComp from "@/styles/Components.module.scss";
 
 interface Props {
   gameStarted: boolean;

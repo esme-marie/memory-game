@@ -1,6 +1,10 @@
 @import "@/styles/variables/variables.scss";
 @import "@/styles/mixins/mixins.scss";
 
+@function vh($quantity) {
+  @return calc(var(--vh, 1vh) * #{$quantity});
+}
+
 .game_screen {
   background-color: $primary-white;
   padding: 5.5rem;
@@ -9,7 +13,7 @@
   margin-right: auto;
   left: 0;
   right: 0;
-  min-height: 100%;
+  min-height: vh(100);
 
   @include breakpoint(500) {
     padding: 4.5rem;

@@ -3,16 +3,20 @@
 
 .game_screen {
   background-color: $primary-white;
-  padding: 6.4rem 6.4rem 8rem;
-  position: relative;
-  min-height: 100vh;
+  padding: 5.5rem;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  min-height: 100%;
 
   @include breakpoint(500) {
-    padding: 4rem 4rem 8rem;
+    padding: 4.5rem;
   }
 
   @include breakpoint(400) {
-    padding: 4rem 2.8rem 8rem;
+    padding: 2.5rem;
   }
 }
 

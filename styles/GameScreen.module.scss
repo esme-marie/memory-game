@@ -5,10 +5,6 @@
   background-color: $primary-white;
   padding: 5.5rem;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
   min-height: 100vh;
 
   @include breakpoint(500) {
